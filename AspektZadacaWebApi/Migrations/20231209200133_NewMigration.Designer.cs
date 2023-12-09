@@ -3,6 +3,7 @@ using AspektZadacaWebApi.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AspektZadacaWebApi.Migrations
 {
     [DbContext(typeof(AspektBasicWebAPIDbContext))]
-    partial class AspektBasicWebAPIDbContextModelSnapshot : ModelSnapshot
+    [Migration("20231209200133_NewMigration")]
+    partial class NewMigration
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -38,11 +41,6 @@ namespace AspektZadacaWebApi.Migrations
                     b.ToTable("Companies");
 
                     b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Name = "Aspekt"
-                        },
                         new
                         {
                             Id = 4,
