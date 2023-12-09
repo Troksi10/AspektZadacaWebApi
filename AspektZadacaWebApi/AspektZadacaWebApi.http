@@ -1,0 +1,6 @@
+@AspektZadacaWebApi_HostAddress = http://localhost:5030
+
+GET {{AspektZadacaWebApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
